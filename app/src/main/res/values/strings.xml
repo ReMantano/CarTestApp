@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Auto</string>
+    <string name="price">Price</string>
+    <string name="transmisson">Transmisson</string>
+    <string name="type">Type</string>
+    <string name="fuel">Fuel</string>
+    <string name="speed">Speed</string>
+    <string name="power">Power</string>
+    <string name="engine">Engine</string>
+    <string name="type_class">Class</string>
+    <string name="cargo">Cargo</string>
+    <string name="release_date">Release date</string>
+    <string name="brand">Brand</string>
+    <string name="owner">Owner</string>
+    <string-array name="price_sort">
+        <item>Min</item>
+        <item>Max</item>
+    </string-array>
+</resources>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/ic_inline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+        <EditText
+            android:id="@+id/editDetalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            tools:text="Audi"
+            android:textColor="@android:color/white"
+            android:textSize="8pt"
+            android:background="@null"
+            android:textStyle="bold"
+            android:maxLength="15"
+            android:enabled="false"
+            android:inputType="text"
+            android:layout_marginLeft="16dp"/>
+        <ImageButton
+            android:id="@+id/headerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_edit_circle" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/detalImage"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/select_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/owner"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/detalImage"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer" />
+
+    <EditText
+        android:id="@+id/editDetalOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:enabled="false"
+        android:inputType="text"
+        tools:text="Audi"
+        android:textColor="@android:color/white"
+        android:textSize="6pt"
+        android:textStyle="bold"
+        android:maxLength="14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/brand"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/detalImage"
+        app:layout_constraintTop_toBottomOf="@id/editDetalOwner" />
+
+    <EditText
+        android:id="@+id/editDetalBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:enabled="false"
+        android:inputType="text"
+        tools:text="Q7"
+        android:textColor="@android:color/white"
+        android:textSize="6pt"
+        android:textStyle="bold"
+        android:maxLength="15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDetalOwner" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/price"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/detalImage"
+        app:layout_constraintTop_toBottomOf="@id/editDetalBrand" />
+
+
+    <EditText
+        android:id="@+id/editDetalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:enabled="false"
+        android:inputType="numberSigned"
+        tools:text="2000$"
+        android:textColor="@android:color/white"
+        android:textSize="6pt"
+        android:textStyle="bold"
+        android:maxLength="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDetalBrand"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"/>
+
+
+    <ScrollView
+        android:id="@+id/notUseScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalImage"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/notUseConstarain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/notUseScroll"
+            app:layout_constraintTop_toBottomOf="@id/notUseScroll"
+            app:layout_constraintEnd_toEndOf="@id/notUseScroll"
+            app:layout_constraintBottom_toBottomOf="@id/notUseScroll"
+            android:layout_margin = "8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="@string/release_date"
+                app:layout_constraintTop_toBottomOf="@id/notUseConstarain"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editDetalDate"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="date"
+                tools:text="2015"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notUseConstarain"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+
+
+
+            <TextView
+                android:id="@+id/notUseCargo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="@string/cargo"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editDetalDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/type"
+                android:textStyle="bold"
+                android:maxLength="15"
+                app:layout_constraintTop_toBottomOf="@id/notUseCargo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editCargoType"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="text"
+                tools:text="SUV"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notUseCargo"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/type_class"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editCargoType"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editCargoClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="text"
+                tools:text="j"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editCargoType"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+            <TextView
+                android:id="@+id/notUseEngine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="@string/engine"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editCargoClass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/power"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/notUseEngine"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEnginePower"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="numberSigned"
+                tools:text="350"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notUseEngine"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/speed"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editEnginePower"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEngineSpeed"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="numberSigned"
+                tools:text="210"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editEnginePower"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/fuel"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editEngineSpeed"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEngineFuel"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="numberSigned"
+                tools:text="10.5"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editEngineSpeed"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/notUseTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="@string/transmisson"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/editEngineFuel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/type"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/notUseTransmission"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTransmissionType"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="text"
+                tools:text="Manual"
+                android:textColor="@android:color/white"
+                android:textSize="6pt"
+                android:textStyle="bold"
+                android:maxLength="15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notUseTransmission"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
